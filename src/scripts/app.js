@@ -17,8 +17,11 @@ const app = function() {
             '*catchall': 'default'
         },
         showLoginPage: function() {
-            location.hash = 'login'
+            ReactDOM.render(<LoginView />, document.querySelector('.container'))
         },
+        showPostEditor: function() {
+            location.hash
+        }
         default: function() {
             location.hash = 'allPosts'
         },
