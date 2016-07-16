@@ -16,6 +16,9 @@ const app = function() {
             'allPosts': 'showAllPosts',
             '*catchall': 'default'
         },
+        showLoginPage: function() {
+            location.hash = 'login'
+        },
         default: function() {
             location.hash = 'allPosts'
         },
