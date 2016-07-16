@@ -20,7 +20,7 @@ const app = function() {
             ReactDOM.render(<LoginView />, document.querySelector('.container'))
         },
         showPostEditor: function() {
-            location.hash
+            ReactDOM.render(<ComposeView />, document.querySelector('.container'))
         }
         default: function() {
             location.hash = 'allPosts'
