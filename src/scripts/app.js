@@ -25,9 +25,14 @@ const app = function() {
         },
 
         showMyPosts: function() {
-            var coll = new postCollection()
-            ReactDOM.render(<MyPostsView postColl = {coll} />, document.querySelector('.container'))
+            ReactDOM.render(<MyPostsView />, document.querySelector('.container'))
         },
+
+        showAllPosts: function() {
+            var coll = new PostCollection()
+            coll.fetch()
+            ReactDOM.render(<AllPostsView postColl = {coll} />, document.querySelector('.container'))
+        }
 
         default: function() {
             location.hash = 'allPosts'
