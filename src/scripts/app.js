@@ -6,6 +6,15 @@ import {User} from './models/models'
 
 const app = function() {
 
+    const PostRouter = Backbone.Router.extend ({
+        routes: {
+            'login': 'showLoginPage',
+            'compose': 'showPostEditor',
+            'myPosts': 'showMyPosts',
+            'allPosts': 'showAllPosts',
+            '*catchall': 'default'
+        }
+    })
 }
 
 // x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..
