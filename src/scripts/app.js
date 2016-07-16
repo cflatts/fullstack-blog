@@ -13,6 +13,9 @@ const app = function() {
             'myPosts': 'showMyPosts',
             'allPosts': 'showAllPosts',
             '*catchall': 'default'
+        },
+        initialize: function() {
+            Backbone.history.start()
         }
     })
 }
