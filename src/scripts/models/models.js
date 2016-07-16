@@ -57,10 +57,10 @@ const myUserModel = User.extend({
 
 })
 
-export const postModel = Backbone.Model.extend ({
+export const PostModel = Backbone.Model.extend ({
 
 })
 
-export const postCollection = Backbone.Collection.extend ({
+export const PostCollection = Backbone.Collection.extend ({
     model: postModel
 })
