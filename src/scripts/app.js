@@ -16,19 +16,28 @@ const app = function() {
             'allPosts': 'showAllPosts',
             '*catchall': 'default'
         },
+
         showLoginPage: function() {
             ReactDOM.render(<LoginView />, document.querySelector('.container'))
         },
+
         showPostEditor: function() {
             ReactDOM.render(<ComposeView />, document.querySelector('.container'))
-        }
+        },
+
+        showMyPosts: function() {
+            ReactDOM.render(<MyPostsView />, document.querySelector('.container'))
+        },
+
         default: function() {
             location.hash = 'allPosts'
         },
+
         initialize: function() {
             Backbone.history.start()
         }
     })
+    new PostRouter()
 }
 
 // x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..
