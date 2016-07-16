@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom'
 import Backbone from 'backbone'
 import init from './init'
 import {User} from './models/models'
+import {postModel} from './models/models'
+import {postCollection} from './models/models'
 
 const app = function() {
 
