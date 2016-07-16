@@ -32,7 +32,7 @@ const app = function() {
             var coll = new PostCollection()
             coll.fetch()
             ReactDOM.render(<AllPostsView postColl = {coll} />, document.querySelector('.container'))
-        }
+        },
 
         default: function() {
             location.hash = 'allPosts'
