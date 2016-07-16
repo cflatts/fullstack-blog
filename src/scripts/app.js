@@ -14,6 +14,9 @@ const app = function() {
             'allPosts': 'showAllPosts',
             '*catchall': 'default'
         },
+        default: function() {
+            location.hash = 'allPosts'
+        },
         initialize: function() {
             Backbone.history.start()
         }
