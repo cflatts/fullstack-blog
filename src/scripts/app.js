@@ -6,6 +6,7 @@ import init from './init'
 import {User} from './models/models'
 import {PostCollection} from './models/models'
 import AllPostsView from './views/AllPostsView'
+import LoginView from './views/LoginView'
 
 
 const app = function() {
