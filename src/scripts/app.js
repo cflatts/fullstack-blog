@@ -1,10 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Backbone from 'backbone'
+import $ from 'jquery'
 import init from './init'
 import {User} from './models/models'
 import {PostCollection} from './models/models'
-import {AllPostsView} from './views/AllPostsView'
+import AllPostsView from './models/AllPostsView'
+
 
 const app = function() {
 
