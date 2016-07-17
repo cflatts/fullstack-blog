@@ -15,10 +15,11 @@ const Links = React.createClass ({
     render: function () {
         return (
             <div className = 'navLinks'>
-                <a href = ''>Home</a>
-                <a href = ''>Login</a>
-                <a href = ''>Mine</a>
-                <a href = ''>All</a>
+                <a href = '#allPosts'>Home</a>
+                <a href = '#login'>Login</a>
+                <a href = '#compose'>Compose</a>
+                <a href = '#myPosts'>Mine</a>
+                <a href = '#allPosts'>All</a>
             </div>
             )
     }
