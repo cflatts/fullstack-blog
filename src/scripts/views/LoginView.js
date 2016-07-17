@@ -20,6 +20,13 @@ const Login = React.createClass ({
                     <h3>Register</h3>
                     <input type = 'text' name = 'registerName' placeholder = 'username' />
                     <input type = 'text' name = 'registerPassword' placeholder = 'password' />
+                    <button type = 'submit'>Submit</button>
+                </form>
+                <form className = 'login'>
+                    <h3>Login</h3>
+                    <input type = 'text' name = 'loginName' placeholder = 'username' />
+                    <input type = 'text' name = 'loginPassword' placeholder = 'password' />
+                    <button type = 'submit'>Submit</button>
                 </form>
             </div>
             )
