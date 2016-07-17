@@ -3,12 +3,28 @@
 	box-sizing: border-box;
 }
 
+//General styling for all views
 h1 {
 	font-size: 96px;
     font-weight: 300;
 	text-align: center;
 	color: #8ee7e1;
 }
+
+button {
+    display: block;
+    border: 1px solid #8ee7e1;
+    font-size: 18px;
+    color: #8ee7e1;
+    margin: 5px auto;
+    background-color: white;
+}
+
+input:focus {
+    outline: none;
+}
+
+//Navigation Bar at the top of each page
 .navLinks {
     text-align: center;
 
@@ -22,7 +38,24 @@ h1 {
     }
 }
 
-form {
+//title and compose input on compose view
+.composeForm {
+
+    input {
+        width: 70%;
+        border: 1px solid #8ee7e1;
+        margin: 3%;
+    }
+
+    #title {
+        font-size: 36px;
+    }
+
+    #compose {}
+}
+
+//login and register boxes on log/register page
+.signIn {
     width: 40%;
     border: 1px solid #8ee7e1;
     text-align: center;
@@ -42,18 +75,5 @@ form {
         border: 1px solid #8ee7e1;
         font-size: 18px;
         color: #8ee7e1;
-    }
-
-    input:focus {
-        outline: none;
-    }
-
-    button {
-        display: block;
-        border: 1px solid #8ee7e1;
-        font-size: 18px;
-        color: #8ee7e1;
-        margin: 5px auto;
-        background-color: white;
     }
 }

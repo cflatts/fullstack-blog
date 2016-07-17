@@ -16,10 +16,11 @@ const Compose = React.createClass ({
     render: function() {
         return (
             <div className = 'composeForm'>
-                <input type = 'text' placeholder = 'Title' />
-                <input type = 'text' placeholder = 'What would you like to Bloggle?' />
+                <input id = 'title' type = 'text' placeholder = 'Title' />
+                <input id = 'compose' type = 'text' placeholder = 'What would you like to Bloggle?' />
                 <button type = 'submit'>Submit</button>
-            </div>)
+            </div>
+            )
     }
 })
 
