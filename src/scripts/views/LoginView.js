@@ -16,9 +16,10 @@ const Login = React.createClass ({
     render: function() {
         return (
             <div className = 'loginForm'>
-                <form>
-                    <input name = 'registerName' />
-                    <input name = 'registerPassword' />
+                <form className = 'register'>
+                    <h3>Register</h3>
+                    <input type = 'text' name = 'registerName' placeholder = 'username' />
+                    <input type = 'text' name = 'registerPassword' placeholder = 'password' />
                 </form>
             </div>
             )
