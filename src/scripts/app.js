@@ -18,6 +18,7 @@ const app = function() {
             'compose': 'showPostEditor',
             'myPosts': 'showMyPosts',
             'allPosts': 'showAllPosts',
+            'singlePost': 'showDetailView'
             '*catchall': 'default'
         },
 
@@ -37,6 +38,10 @@ const app = function() {
             var coll = new PostCollection()
             coll.fetch()
             ReactDOM.render(<AllPostsView postColl = {coll} />, document.querySelector('.container'))
+        },
+
+        showDetailView: function() {
+            ReactDOM.render(<SingleView />, document.querySelector('.container'))
         },
 
         default: function() {
