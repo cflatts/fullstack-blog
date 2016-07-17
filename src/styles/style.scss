@@ -4,6 +4,11 @@
 }
 
 //General styling for all views
+
+*:focus {
+    outline: none;
+}
+
 h1 {
 	font-size: 96px;
     font-weight: 300;
@@ -18,14 +23,11 @@ button {
     color: #8ee7e1;
     margin: 5px auto;
     background-color: white;
+    cursor: pointer;
 }
 
 input[type = text] {
     color: #8ee7e1;
-}
-
-input:focus {
-    outline: none;
 }
 
 //Navigation Bar at the top of each page
@@ -59,17 +61,13 @@ input:focus {
     #compose {
         width: 70%;
         border: 1px solid #8ee7e1;
-        margin: 0 3% 3% 3%;
+        margin: 0 3%;
         height: 300px;
         font-size: 16px;
     }
 
     #compose[type = text] {
         color: #8ee7e1;
-    }
-
-    textarea:focus {
-        outline: none;
     }
 }
 
