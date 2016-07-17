@@ -4,6 +4,7 @@ import Backbone from 'backbone'
 import init from './init'
 import {User} from './models/models'
 import {PostCollection} from './models/models'
+import {AllPostsView} from './views/AllPostsView'
 
 const app = function() {
 

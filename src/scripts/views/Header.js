@@ -5,9 +5,6 @@ const Header = React.createClass ({
         return (
             <div className = 'header'>
                 <h1>Bloggle</h1>
-            </div>
-            )
+            </div>)
     }
 })
-
-export default Header
