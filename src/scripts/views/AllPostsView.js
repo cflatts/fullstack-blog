@@ -6,6 +6,7 @@ const AllPostsView= React.createClass ({
     render: function() {
         return (
             <div className = 'allPosts'>
+                <Header />
             </div>
             )
     }
