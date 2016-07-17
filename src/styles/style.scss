@@ -12,13 +12,12 @@ h1 {
 .navLinks {
     text-align: center;
 
-    button {
+    a {
         margin: 0 7%;
         border: none;
         color: #8ee7e1;
         font-size: 24px;
-        background-color: white;
-        outline: none;
+        text-decoration: none;
         cursor: pointer;
     }
 }
