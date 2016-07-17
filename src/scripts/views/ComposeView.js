@@ -17,7 +17,7 @@ const Compose = React.createClass ({
         return (
             <div className = 'composeForm'>
                 <input id = 'title' type = 'text' placeholder = 'Title' />
-                <input id = 'compose' type = 'text' placeholder = 'What would you like to Bloggle?' />
+                <textarea id = 'compose' type = 'text' placeholder = 'What would you like to Bloggle?'></textarea>
                 <button type = 'submit'>Submit</button>
             </div>
             )

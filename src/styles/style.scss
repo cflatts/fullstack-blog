@@ -20,6 +20,10 @@ button {
     background-color: white;
 }
 
+input[type = text] {
+    color: #8ee7e1;
+}
+
 input:focus {
     outline: none;
 }
@@ -48,10 +52,25 @@ input:focus {
     }
 
     #title {
-        font-size: 36px;
+        font-size: 30px;
+        padding: 1% 0;
     }
 
-    #compose {}
+    #compose {
+        width: 70%;
+        border: 1px solid #8ee7e1;
+        margin: 0 3% 3% 3%;
+        height: 300px;
+        font-size: 16px;
+    }
+
+    #compose[type = text] {
+        color: #8ee7e1;
+    }
+
+    textarea:focus {
+        outline: none;
+    }
 }
 
 //login and register boxes on log/register page
@@ -74,6 +93,5 @@ input:focus {
     input[type = text] {
         border: 1px solid #8ee7e1;
         font-size: 18px;
-        color: #8ee7e1;
     }
 }
