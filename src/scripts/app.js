@@ -18,7 +18,7 @@ const app = function() {
             'compose': 'showPostEditor',
             'myPosts': 'showMyPosts',
             'allPosts': 'showAllPosts',
-            'singlePost': 'showDetailView'
+            'singlePost': 'showDetailView',
             '*catchall': 'default'
         },
 
