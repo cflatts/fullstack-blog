@@ -33,6 +33,11 @@ const AllPostsView = React.createClass ({
 })
 
 var Dashboard = React.createClass ({
+
+    _createPost:function(record) {
+        return <PostsDisplay key={record.id} record={record} />
+    },
+
     render: function() {
         return (
             <div className = 'dashboard'>
