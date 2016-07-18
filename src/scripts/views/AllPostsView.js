@@ -26,7 +26,17 @@ const AllPostsView = React.createClass ({
         return (
             <div className = 'allPosts'>
                 <Header />
-                <PostsDisplay postColl = {this.props.postColl} />
+                <Dashboard postColl = {this.props.postColl} />
+            </div>
+            )
+    }
+})
+
+var Dashboard = React.createClass ({
+    render: function() {
+        return (
+            <div className = 'dashboard'>
+                {this.props.postColl.map(this._createPost)}
             </div>
             )
     }

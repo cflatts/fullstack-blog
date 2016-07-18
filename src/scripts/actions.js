@@ -9,14 +9,14 @@ const ACTIONS = {
         })
     },
 
-    logUserIn: function(email,password) {
+    loginUser: function(email,password) {
         return User.login(email,password).then(function(resp){
             console.log(resp)
             location.hash = "showAllPosts"
         })
     },
 
-    logUserOut: function() {
+    logoutUser: function() {
         return User.logout().then(() => {
             location.hash = "login"
         })
