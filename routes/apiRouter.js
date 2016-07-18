@@ -3,6 +3,7 @@ const apiRouter = Router()
 let helpers = require('../config/helpers.js')
 
 let User = require('../db/schema.js').User
+let Post = require('../db/schema.js').Post
 
 
   apiRouter
@@ -41,6 +42,13 @@ let User = require('../db/schema.js').User
     })
 
     // Routes for a Model(resource) should have this structure
+
+  apiRouter.get('/posts', function(request, response) {
+    console.log('get posts')
+    Post.find({}, function(error, records) {
+        response.send(records)
+    })
+  })
 
 
 module.exports = apiRouter
