@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from './header'
+import {PostModel} from '../models/models'
 
 const ComposeView = React.createClass ({
     render: function() {
