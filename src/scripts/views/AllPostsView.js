@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from './header'
-import ComposeView from './ComposeView'
+
 
 
 const AllPostsView = React.createClass ({
