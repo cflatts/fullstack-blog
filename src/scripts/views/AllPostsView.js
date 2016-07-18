@@ -10,6 +10,7 @@ const AllPostsView = React.createClass ({
     },
 
     componentWillMount: function () {
+        console.log('mounting')
         this.props.postColl.on('update', () => {
             this.setState ({
                 postColl: this.state.postColl

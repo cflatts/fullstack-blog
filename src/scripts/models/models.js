@@ -58,7 +58,7 @@ const myUserModel = User.extend({
 })
 
 export const PostModel = Backbone.Model.extend ({
-    url: '/api/messages'
+    url: '/api/messages',
     idAttribute: '_id'
 })
 
