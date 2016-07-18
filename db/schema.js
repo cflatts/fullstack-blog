@@ -11,10 +11,6 @@ const usersSchema = new Schema({
   password:  { type: String, required: true },
   // x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x
 
-   // example of optional fields
-  name:      { type: String },
-  createdAt: { type: Date, default: Date.now }
-
 })
 
 const postsSchema = new Schema({

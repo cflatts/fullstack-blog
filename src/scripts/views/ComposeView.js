@@ -20,7 +20,9 @@ const Compose = React.createClass ({
 
         var newPost = new PostModel ({
             title: evt.target.title.value,
-            content: evt.target.compose.value
+            content: evt.target.compose.value,
+            user: User.getCurrentUser().email,
+            date: Date.now
         })
         newPost.save()
     },
