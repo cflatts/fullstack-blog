@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from './header'
+import {PostModel} from '../models/models'
 
 const AllPostsView = React.createClass ({
 
@@ -22,7 +23,7 @@ const AllPostsView = React.createClass ({
         return (
             <div className = 'allPosts'>
                 <Header />
-                <PostsDisplay />
+                <PostsDisplay postColl = {this.state.listColl}/>
             </div>
             )
     }
@@ -30,6 +31,7 @@ const AllPostsView = React.createClass ({
 
 const PostsDisplay = React.createClass ({
     render: function() {
+        console.log(this.props)
         return (
             <div className = 'postDisplay'>
                 <div className = 'postContainer'>
