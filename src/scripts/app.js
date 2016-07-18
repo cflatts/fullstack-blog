@@ -8,6 +8,7 @@ import {PostCollection} from './models/models'
 import AllPostsView from './views/AllPostsView'
 import LoginView from './views/LoginView'
 import ComposeView from './views/ComposeView'
+import MyPostsView from './views/MyPostsView'
 
 
 const app = function() {

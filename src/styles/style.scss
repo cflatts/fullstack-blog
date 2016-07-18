@@ -102,16 +102,28 @@ h1 {
 
 .postDisplay {
     margin: 3%;
+    color: #8ee7e1;
 
-    .postTitle {
-        color: #8ee7e1;
-        font-size: 30px;
-    }
+    .postContainer {
+        width: 50%;
+        display: inline-block;
 
-    .postPreview {
-        color: #8ee7e1;
-        font-size: 16px;
-        margin-bottom: 1%;
+        .postTitle {
+            font-size: 30px;
+        }
+
+        .postPreview {
+            font-size: 16px;
+            margin-bottom: 1%;
+        }
+
+        .user {
+            font-size: 10px;
+        }
+
+        .datePosted {
+            font-size: 10px;
+        }
     }
 
     hr {
