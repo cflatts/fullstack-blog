@@ -2,6 +2,13 @@ import React from 'react'
 import Header from './header'
 
 const AllPostsView = React.createClass ({
+
+    getInitialState: function() {
+        return {
+            postColl: this.props.postColl
+        }
+    },
+
     render: function() {
         return (
             <div className = 'allPosts'>
