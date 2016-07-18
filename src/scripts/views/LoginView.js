@@ -16,11 +16,12 @@ const Login = React.createClass ({
 
     _handleRegister: function() {
         evt.preventDefault()
-        ACTIONS.registerUser(evt.currentTarget.email.value, evt.currentTarget.password.value)
+        ACTIONS.registerUser(evt.target.email.value, evt.target.password.value)
     },
 
     _handleLogin: function() {
         evt.preventDefault()
+        ACTIONS.loginUser(evt.target.email.value, evt.target.password.value)
     },
 
     render: function() {
