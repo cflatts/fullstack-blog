@@ -24,7 +24,7 @@ const Compose = React.createClass ({
 
     render: function() {
         return (
-            <div className = 'composeForm'>
+            <div className = 'composeForm' onSubmit = {this._addPost}>
                 <input name = 'title' id = 'title' type = 'text' placeholder = 'Title' />
                 <textarea name = 'compose' id = 'compose' type = 'text' placeholder = 'What would you like to Bloggle?'></textarea>
                 <button type = 'submit'>Submit</button>
