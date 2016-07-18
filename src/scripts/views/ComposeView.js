@@ -15,7 +15,7 @@ const ComposeView = React.createClass ({
 
 const Compose = React.createClass ({
 
-    _addPost: function(evt) {
+    _savePost: function(evt) {
         var newPost = new PostModel ({
             title: evt.target.title.value,
             content: evt.target.compose.value
@@ -25,7 +25,7 @@ const Compose = React.createClass ({
 
     render: function() {
         return (
-            <div className = 'composeForm' onSubmit = {this._addPost}>
+            <div className = 'composeForm' onSubmit = {this._savePost}>
                 <input name = 'title' id = 'title' type = 'text' placeholder = 'Title' />
                 <textarea name = 'compose' id = 'compose' type = 'text' placeholder = 'What would you like to Bloggle?'></textarea>
                 <button type = 'submit'>Submit</button>
