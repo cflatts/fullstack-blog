@@ -133,3 +133,19 @@ h1 {
         margin: 0 auto 0 0;
     }
 }
+
+//single view
+
+.singleBody {
+    margin: 3%;
+    color: #8ee7e1;
+
+    .singleTitle {
+        font-size: 30px;
+    }
+
+    .singleContent {
+        font-size: 16px;
+        margin-top: 3%;
+    }
+}

@@ -9,6 +9,7 @@ import AllPostsView from './views/AllPostsView'
 import LoginView from './views/LoginView'
 import ComposeView from './views/ComposeView'
 import MyPostsView from './views/MyPostsView'
+import SingleView from './views/SingleView'
 
 
 const app = function() {

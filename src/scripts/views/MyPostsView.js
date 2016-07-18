@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from './header'
 
-const AllPostsView = React.createClass ({
+const MyPostsView = React.createClass ({
     render: function() {
         return (
             <div className = 'allPosts'>
@@ -29,4 +29,4 @@ const PostsDisplay = React.createClass ({
     }
 })
 
-export default AllPostsView
+export default MyPostsView
