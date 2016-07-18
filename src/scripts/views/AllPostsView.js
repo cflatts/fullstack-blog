@@ -12,7 +12,7 @@ const AllPostsView = React.createClass ({
     },
 
     componentWillMount: function () {
-        console.log('mounting')
+        // console.log('mounting')
         this.props.postColl.on('update', () => {
             this.setState ({
                 postColl: this.state.postColl
@@ -35,7 +35,7 @@ const AllPostsView = React.createClass ({
 const PostsDisplay = React.createClass ({
 
     render: function() {
-        console.log(this.props)
+        // console.log(this.props)
         return (
             <div className = 'postDisplay'>
                 <div className = 'postContainer'>
