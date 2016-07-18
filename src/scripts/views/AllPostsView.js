@@ -25,13 +25,18 @@ const AllPostsView = React.createClass ({
         return (
             <div className = 'allPosts'>
                 <Header />
-                <PostsDisplay postColl = {this.state.postColl}/>
+                <PostsDisplay postColl = {this.state.postColl} _addPostToList = {this._addPost} />
             </div>
             )
     }
 })
 
 const PostsDisplay = React.createClass ({
+
+    _addPost: function(evt) {
+        this.props._addPostToList(evt.target.value)
+    },
+
     render: function() {
         console.log(this.props)
         return (
