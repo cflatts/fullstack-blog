@@ -16,6 +16,7 @@ const Login = React.createClass ({
 
     _handleRegister: function() {
         evt.preventDefault()
+        ACTIONS.registerUser(evt.currentTarget.email.value, evt.currentTarget.password.value)
     },
 
     _handleLogin: function() {
