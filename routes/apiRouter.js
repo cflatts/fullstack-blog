@@ -5,7 +5,7 @@ let helpers = require('../config/helpers.js')
 let User = require('../db/schema.js').User
 let Post = require('../db/schema.js').Post
 
-
+//USER ROUTES
   apiRouter
     .get('/users', function(req, res){
       User.find(req.query , "-password", function(err, results){
@@ -43,6 +43,9 @@ let Post = require('../db/schema.js').Post
 
     // Routes for a Model(resource) should have this structure
 
+//MODEL ROUTES
+
+  //read all
   apiRouter.get('/posts', function(request, response) {
     console.log('get posts')
     Post.find({}, function(error, records) {
@@ -50,6 +53,30 @@ let Post = require('../db/schema.js').Post
     })
   })
 
+  //read many from single user
+
+  apiRouter.get('/myPosts', function(request, response) {
+    console.log('getposts too')
+    if(request.user) {
+        Post.find({user:request.user.email}, function(error, records) {
+            if(error) {
+                response.json ({
+                    error: error
+                })
+            }
+            else {
+                response.json(records)
+            }
+        })
+    }
+    else {
+        response.status(404).json ({
+            error: 'no user logged in'
+        })
+    }
+  })
+
+  //write one
   apiRouter.post('/posts', function(request, response) {
     let newRecord = new Post(request.body)
     newRecord.save(function(error) {
