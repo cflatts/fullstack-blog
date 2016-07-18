@@ -16,6 +16,8 @@ const ComposeView = React.createClass ({
 const Compose = React.createClass ({
 
     _savePost: function(evt) {
+        evt.preventDefault()
+
         var newPost = new PostModel ({
             title: evt.target.title.value,
             content: evt.target.compose.value
