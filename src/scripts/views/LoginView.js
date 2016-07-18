@@ -15,11 +15,11 @@ const LoginView = React.createClass ({
 const Login = React.createClass ({
 
     _handleRegister: function() {
-
+        evt.preventDefault()
     },
 
     _handleLogin: function() {
-
+        evt.preventDefault()
     },
 
     render: function() {
