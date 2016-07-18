@@ -26,7 +26,7 @@ const AllPostsView = React.createClass ({
         return (
             <div className = 'allPosts'>
                 <Header />
-                <PostsDisplay postColl = {this.state.postColl} />
+                <PostsDisplay postColl = {this.props.postColl} />
             </div>
             )
     }
