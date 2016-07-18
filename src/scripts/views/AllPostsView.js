@@ -9,6 +9,14 @@ const AllPostsView = React.createClass ({
         }
     },
 
+    componentWillMount: function () {
+        this.props.postColl.on('update', () => {
+            this.setState ({
+                postColl: this.state.postColl
+            })
+        })
+    },
+
     render: function() {
         return (
             <div className = 'allPosts'>
