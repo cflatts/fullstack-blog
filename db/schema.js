@@ -1,3 +1,4 @@
+//time to start a redo because i know more about how to do this
 const mongoose = require('mongoose');
 const createModel = mongoose.model.bind(mongoose);
 const Schema = mongoose.Schema;
