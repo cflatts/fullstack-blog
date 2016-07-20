@@ -57,5 +57,16 @@ apiRouter.get('/posts', function(request, response){
     })
 })
 
+apiRouter.get('/user/posts', function(request, response) {
+    Posts.find({username: request.user._id}, function(error, records) {
+        if(error) {
+            response.send(error)
+        }
+        else {
+            response.json(records)
+        }
+    })
+})
+
 
 module.exports = apiRouter
