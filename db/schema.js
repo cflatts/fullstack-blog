@@ -19,7 +19,7 @@ const postsSchema = new Schema ({
     preview: {type: String, required: true},
     content: {type: String, required: true},
     username: {type: String},
-    {timestamps: true}
+    // {timestamps: true}
 })
 
 module.exports = {

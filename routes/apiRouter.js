@@ -58,7 +58,7 @@ apiRouter.post('/posts', function(request, response){
 })
 
 apiRouter.get('/user/posts', function(request, response) {
-    Posts.find({username: request.user._id}, function(error, records) {
+    Post.find({username: request.user._id}, function(error, records) {
         if(error) {
             response.send(error)
         }
@@ -69,12 +69,12 @@ apiRouter.get('/user/posts', function(request, response) {
 })
 
 apiRouter.get('/posts', function(request, response) {
-    Posts.find(request.query, function(request, response){
+    Post.find(request.query, function(error, records){
         if(error) {
-            response.send(Error)
+            response.send(error)
         }
         else {
-            reponse.json(records)
+            response.json(records)
         }
     })
 })
