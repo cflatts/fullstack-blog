@@ -1,25 +1,10 @@
 import React from 'react'
 import Header from './header'
+import {STORE} from '../msgStore'
 
 
 
 const AllPostsView = React.createClass ({
-
-    getInitialState: function() {
-        return {
-            postColl: this.props.postColl
-        }
-    },
-
-    componentWillMount: function () {
-        // console.log('mounting')
-        this.props.postColl.on('update', () => {
-            this.setState ({
-                postColl: this.state.postColl
-            })
-        })
-    },
-
 
     render: function() {
         // console.log(this.props)
