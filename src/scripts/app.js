@@ -37,9 +37,7 @@ const app = function() {
         },
 
         showAllPosts: function() {
-            var coll = new PostCollection()
-            coll.fetch()
-            ReactDOM.render(<AllPostsView postColl = {coll} />, document.querySelector('.container'))
+            ReactDOM.render(<AllPostsView />, document.querySelector('.container'))
         },
 
         showDetailView: function() {
