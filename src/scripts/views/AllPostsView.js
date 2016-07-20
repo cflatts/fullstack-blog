@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from './header'
 import {STORE} from '../msgStore'
+import {PostCollection} from '../models/models'
 
 
 
