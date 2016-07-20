@@ -7,6 +7,14 @@ import {PostCollection} from '../models/models'
 
 const AllPostsView = React.createClass ({
 
+    getInitialState: function() {
+        return STORE.retrieveData()
+    },
+
+    componenetWillmount: function() {
+
+    },
+
     render: function() {
         // console.log(this.props)
         return (
