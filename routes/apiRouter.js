@@ -45,49 +45,17 @@ let Post = require('../db/schema.js').Post
 
 //MODEL ROUTES
 
-  //read all
-  apiRouter.get('/posts', function(request, response) {
-    console.log('get posts')
-    Post.find({}, function(error, records) {
-        response.send(records)
-    })
-  })
-
-  //read many from single user
-
-  apiRouter.get('/myPosts', function(request, response) {
-    console.log('getposts too')
-    if(request.user) {
-        Post.find({user:request.user.email}, function(error, records) {
-            if(error) {
-                response.json ({
-                    error: error
-                })
-            }
-            else {
-                response.json(records)
-            }
-        })
-    }
-    else {
-        response.status(404).json ({
-            error: 'no user logged in'
-        })
-    }
-  })
-
-  //write one
-  apiRouter.post('/posts', function(request, response) {
-    let newRecord = new Post(request.body)
-    newRecord.save(function(error) {
+apiRouter.get('/posts', function(request, response){
+    let post = new Post(request.body)
+    post.save(function(error) {
         if(error) {
             response.send(error)
         }
         else {
-            response.json(newRecord)
+            response.json(post)
         }
     })
-  })
+})
 
 
 module.exports = apiRouter
