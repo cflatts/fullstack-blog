@@ -68,8 +68,15 @@ apiRouter.get('/user/posts', function(request, response) {
     })
 })
 
-apiRouter.post('/posts', function(request, response) {
-
+apiRouter.get('/posts', function(request, response) {
+    Posts.find(request.query, function(request, response){
+        if(error) {
+            response.send(Error)
+        }
+        else {
+            reponse.json(records)
+        }
+    })
 })
 
 module.exports = apiRouter
