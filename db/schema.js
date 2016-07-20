@@ -14,15 +14,12 @@ const usersSchema = new Schema({
 
 })
 
-const postsSchema = new Schema({
-  createdAt: { type: Date, default: Date.now },
-  title:     { type: String, required: true },
-  description:  { type: String },
-  body:      { type: String},
-  user:      {
-                email: { type: String, required: [true, "No user email supplied"] },
-                _id:   { type: Number, required: true }
-             }
+const postsSchema = new Schema ({
+    title: {type: String, required: true},
+    preview: {type: String, required: true},
+    content: {type: String, required: true},
+    username: {type: String},
+    {timestamps: true}
 })
 
 module.exports = {
