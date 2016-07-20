@@ -8,3 +8,5 @@ const STORE = _.extend(Backbone.Events, {
         collection: new PostCollection
     }
 })
+
+export default STORE
