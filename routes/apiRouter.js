@@ -45,7 +45,7 @@ let Post = require('../db/schema.js').Post
 
 //MODEL ROUTES
 
-apiRouter.get('/posts', function(request, response){
+apiRouter.post('/posts', function(request, response){
     let post = new Post(request.body)
     post.save(function(error) {
         if(error) {
@@ -68,5 +68,8 @@ apiRouter.get('/user/posts', function(request, response) {
     })
 })
 
+apiRouter.post('/posts', function(request, response) {
+
+})
 
 module.exports = apiRouter
