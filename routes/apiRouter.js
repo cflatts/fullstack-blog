@@ -6,6 +6,7 @@ let User = require('../db/schema.js').User
 let Post = require('../db/schema.js').Post
 
 //USER ROUTES
+
   apiRouter
     .get('/users', function(req, res){
       User.find(req.query , "-password", function(err, results){
@@ -78,5 +79,8 @@ apiRouter.get('/posts', function(request, response) {
         }
     })
 })
+
+    // Routes for a Model(resource) should have this structure
+
 
 module.exports = apiRouter
