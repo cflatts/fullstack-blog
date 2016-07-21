@@ -13,4 +13,6 @@ const STORE = _.extend(Backbone.Events, {
     },
 })
 
+STORE.initialize() //justin, why do i have to do this?
+
 export default STORE
