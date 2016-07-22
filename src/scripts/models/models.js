@@ -69,4 +69,9 @@ const User = UserAuthModel.extend({
 	}
 })
 
-export { User }
+const PostModel = Backbone.Model.extend ({
+    url: '/api/posts',
+    idAttribute: '_id'
+})
+
+export { User, PostModel }
