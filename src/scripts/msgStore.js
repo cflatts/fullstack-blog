@@ -11,6 +11,10 @@ const STORE = _.extend(Backbone.Events, {
     retrieveData: function() {
         return _.clone(this.data)
     },
+
+    initialize: function() {
+        return ''
+    }
 })
 
 STORE.initialize() //justin, why do i have to do this?

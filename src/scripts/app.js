@@ -11,6 +11,7 @@ import ComposeView from './views/ComposeView'
 import MyPostsView from './views/MyPostsView'
 import SingleView from './views/SingleView'
 
+const app = function() {
     const PostRouter = Backbone.Router.extend ({
         routes: {
             'login': 'showLoginPage',
@@ -50,6 +51,7 @@ import SingleView from './views/SingleView'
         }
     })
     new PostRouter()
+}
 
 // x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..
 // NECESSARY FOR USER FUNCTIONALITY. DO NOT CHANGE.
