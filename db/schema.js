@@ -24,4 +24,5 @@ const postsSchema = new Schema ({
 
 module.exports = {
   User: createModel('User', usersSchema)
+  Post: createModel('Post', postsSchema)
 }
