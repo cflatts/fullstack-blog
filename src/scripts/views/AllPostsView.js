@@ -9,13 +9,13 @@ import {ACTIONS} from '../actions'
 const AllPostsView = React.createClass ({
 
     getInitialState: function() {
-        return STORE.retrieveData()
+        return STORE.obtainData()
     },
 
     componenetWillmount: function() {
-        ACTIONS.fetchDishes()
+        ACTIONS.fetchPosts()
         STORE.on('updateContent', () => {
-            this.setState(STORE.retrieveData())
+            this.setState(STORE.obtainData())
         })
     },
 

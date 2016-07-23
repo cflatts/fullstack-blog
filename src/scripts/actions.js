@@ -1,4 +1,5 @@
-import {User} from './models/models'
+import {User, PostModel} from './models/models'
+
 
 const ACTIONS = {
     registerUser: function(email,password) {
@@ -20,6 +21,10 @@ const ACTIONS = {
         return User.logout().then(() => {
             location.hash = "login"
         })
+    },
+
+    savePost: function() {
+        var post = new PostModel()
     }
 }
 
