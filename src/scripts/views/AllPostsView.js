@@ -15,8 +15,12 @@ const AllPostsView = React.createClass ({
     componenetWillmount: function() {
         ACTIONS.fetchDishes()
         STORE.on('updateContent', () => {
-            this.setState(STORE.getData())
+            this.setState(STORE.retrieveData())
         })
+    },
+
+    componentWillUnmount: function() {
+        STORE.off('updateContent')
     },
 
     render: function() {

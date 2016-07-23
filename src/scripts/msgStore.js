@@ -17,7 +17,7 @@ const STORE = _.extend(Backbone.Events, {
     },
 
     initialize: function() {
-        this.data.collection.on('sync update', this.emitChange.bind())
+        this.data.collection.on('sync update', this.emitChange.bind(this))
     }
 })
 
