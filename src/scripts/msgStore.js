@@ -8,15 +8,19 @@ const STORE = _.extend(Backbone.Events, {
         collection: new PostCollection()
     },
 
+    emitChange: function() {
+        this.trigger('updateContent')
+    },
+
     retrieveData: function() {
         return _.clone(this.data)
     },
 
     initialize: function() {
-        return ''
+        this.data.collection.on('sync update', this.emitChange.bind())
     }
 })
 
-STORE.initialize() //justin, why do i have to do this?
+STORE.initialize()
 
 export default STORE

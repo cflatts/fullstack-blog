@@ -46,6 +46,7 @@ let Post = require('../db/schema.js').Post
 
 //MODEL ROUTES
 
+//create new post
 apiRouter.post('/posts', function(request, response){
     let post = new Post(request.body)
     post.save(function(error) {
@@ -58,6 +59,7 @@ apiRouter.post('/posts', function(request, response){
     })
 })
 
+//retrieve all posts from signed in user
 apiRouter.get('/user/posts', function(request, response) {
     Post.find({username: request.user._id}, function(error, records) {
         if(error) {
@@ -69,6 +71,7 @@ apiRouter.get('/user/posts', function(request, response) {
     })
 })
 
+//retrieve all posts posted by everybody
 apiRouter.get('/posts', function(request, response) {
     Post.find(request.query, function(error, records){
         if(error) {

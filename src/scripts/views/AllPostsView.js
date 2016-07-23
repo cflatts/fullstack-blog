@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './header'
 import {STORE} from '../msgStore'
 import {PostCollection} from '../models/models'
+import {ACTIONS} from '../actions'
 
 
 
@@ -12,7 +13,10 @@ const AllPostsView = React.createClass ({
     },
 
     componenetWillmount: function() {
-
+        ACTIONS.fetchDishes()
+        STORE.on('updateContent', () => {
+            this.setState(STORE.getData())
+        })
     },
 
     render: function() {
@@ -28,14 +32,13 @@ const AllPostsView = React.createClass ({
 
 var Dashboard = React.createClass ({
 
-    _createPost:function(record) {
-        return <PostsDisplay key={record.id} record={record} />
-    },
 
     render: function() {
         return (
             <div className = 'dashboard'>
-                {this.props.postColl.map(this._createPost)}
+                {this.props.postColl.map(
+                    (model) => <PostsDisplay postModel = {model} key ={model.id} />
+                )}
             </div>
             )
     }
@@ -44,9 +47,9 @@ var Dashboard = React.createClass ({
 const PostsDisplay = React.createClass ({
 
     render: function() {
-        // console.log(this.props)
+        console.log(this.props)
         return (
-            <div className = 'postDisplay'>
+            <div className = 'postDisplay' id = 'left'>
                 <div className = 'postContainer'>
                     <div className = 'postTitle'>Title</div>
                     <div className = 'postPreview'>Post Preview</div>
