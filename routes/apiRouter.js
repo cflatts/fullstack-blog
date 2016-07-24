@@ -46,6 +46,18 @@ let Post = require('../db/schema.js').Post
 
 //MODEL ROUTES
 
+apiRouter.post('/posts', function(request, response) {
+    let post = new Post(request.body)
+    post.save(function(error) {
+        if(error) {
+            response.send(error)
+        }
+        else {
+            response.json(post)
+        }
+    })
+})
+
 
 
 module.exports = apiRouter
