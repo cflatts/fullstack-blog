@@ -22,7 +22,7 @@ const Compose = React.createClass ({
             title: evt.target.title.value,
             content: evt.target.compose.value,
             user: User.getCurrentUser().email,
-            // date: Date.now
+            date: new Date()
         })
         newPost.save()
     },

@@ -19,7 +19,7 @@ const postSchema = new Schema ({
     content: {type: String, required: true},
     authorEmail: {type: String, required: true}
     authorId: {type: String, required: true},
-    date: {new Date()}
+    date: {type: Date, default: Date.now}
 
 })
 
