@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from './header'
-import {PostModel} from '../models/models'
+// import {PostModel} from '../models/models'
+import ACTIONS from '../actions'
 
 const ComposeView = React.createClass ({
     render: function() {
@@ -18,13 +19,12 @@ const Compose = React.createClass ({
     _savePost: function(evt) {
         evt.preventDefault()
 
-        var newPost = new PostModel ({
+        ACTIONS.savePost({
             title: evt.target.title.value,
             content: evt.target.compose.value,
             user: User.getCurrentUser().email,
             date: new Date()
         })
-        newPost.save()
     },
 
     render: function() {
