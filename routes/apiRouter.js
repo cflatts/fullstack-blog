@@ -3,7 +3,6 @@ const apiRouter = Router()
 let helpers = require('../config/helpers.js')
 
 let User = require('../db/schema.js').User
-let Post = require('../db/schema.js').Post
 
 //USER ROUTES
 
@@ -46,44 +45,6 @@ let Post = require('../db/schema.js').Post
 
 //MODEL ROUTES
 
-//create new post
-apiRouter.post('/posts', function(request, response){
-    let post = new Post(request.body)
-    post.save(function(error) {
-        if(error) {
-            response.send(error)
-        }
-        else {
-            response.json(post)
-        }
-    })
-})
-
-//retrieve all posts from signed in user
-apiRouter.get('/user/posts', function(request, response) {
-    Post.find({username: request.user._id}, function(error, records) {
-        if(error) {
-            response.send(error)
-        }
-        else {
-            response.json(records)
-        }
-    })
-})
-
-//retrieve all posts posted by everybody
-apiRouter.get('/posts', function(request, response) {
-    Post.find(request.query, function(error, records){
-        if(error) {
-            response.send(error)
-        }
-        else {
-            response.json(records)
-        }
-    })
-})
-
-    // Routes for a Model(resource) should have this structure
 
 
 module.exports = apiRouter

@@ -1,6 +1,5 @@
 import React from 'react'
 import Header from './header'
-import ACTIONS from '../actions'
 
 
 const LoginView = React.createClass ({

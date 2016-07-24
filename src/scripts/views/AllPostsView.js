@@ -1,8 +1,6 @@
 import React from 'react'
 import Header from './header'
-import {STORE} from '../msgStore'
-import {User, PostCollection} from '../models/models'
-import {ACTIONS} from '../actions'
+import {User} from '../models/models'
 
 
 const AllPostsView = React.createClass ({
