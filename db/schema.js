@@ -16,7 +16,7 @@ const usersSchema = new Schema({
 
 const postsSchema = new Schema ({
     title: {type: String, required: true},
-    preview: {type: String, required: true},
+    preview: {type: String,},
     content: {type: String, required: true},
     username: {type: String},
     // {timestamps: true}

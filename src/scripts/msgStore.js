@@ -12,7 +12,8 @@ const STORE = _.extend(Backbone.Events, {
         this.trigger('updateContent')
     },
 
-    obtainData: function() {
+    retrieveData: function() {
+        console.log(this.data)
         return _.clone(this.data)
     },
 
@@ -22,5 +23,6 @@ const STORE = _.extend(Backbone.Events, {
 })
 
 STORE.initialize()
+// console.log(this.data)
 
 export default STORE

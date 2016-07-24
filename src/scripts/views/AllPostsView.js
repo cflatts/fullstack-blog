@@ -1,52 +1,49 @@
 import React from 'react'
 import Header from './header'
 import {STORE} from '../msgStore'
-import {PostCollection} from '../models/models'
+import {User, PostCollection} from '../models/models'
 import {ACTIONS} from '../actions'
-
 
 
 const AllPostsView = React.createClass ({
 
-    getInitialState: function() {
-        return STORE.obtainData()
-    },
+    // getInitialState: function() {
+    //     return STORE.retrieveData()
+    // },
 
-    componenetWillmount: function() {
-        ACTIONS.fetchPosts()
-        STORE.on('updateContent', () => {
-            this.setState(STORE.obtainData())
-        })
-    },
+    // componenetWillMount: function() {
+    //     ACTIONS.fetchPosts()
+    //     STORE.on('updateContent', () => {
+    //         this.setState(STORE.retrieveData())
+    //     })
+    // },
 
-    componentWillUnmount: function() {
-        STORE.off('updateContent')
-    },
+    // componentWillUnmount: function() {
+    //     STORE.off('updateContent')
+    // },
 
     render: function() {
         console.log(this.props)
         return (
             <div className = 'allPosts'>
                 <Header />
-                <Dashboard postColl = {this.state.postColl} />
+                <PostsDisplay />
             </div>
             )
     }
 })
 
-var Dashboard = React.createClass ({
-
-
-    render: function() {
-        return (
-            <div className = 'dashboard'>
-                {this.props.postColl.map(
-                    (model) => <PostsDisplay postModel = {model} key ={model.id} />
-                )}
-            </div>
-            )
-    }
-})
+// var Dashboard = React.createClass ({
+//     render: function() {
+//         return (
+//             <div className = 'dashboard'>
+//                 {this.props.postColl.map(
+//                     (model) => <PostsDisplay postModel = {model} key ={model.id} />
+//                 )}
+//             </div>
+//             )
+//     }
+// })
 
 const PostsDisplay = React.createClass ({
 

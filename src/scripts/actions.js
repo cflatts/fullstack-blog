@@ -1,4 +1,5 @@
 import {User, PostModel} from './models/models'
+import STORE from './msgStore'
 
 
 const ACTIONS = {
@@ -23,8 +24,19 @@ const ACTIONS = {
         })
     },
 
-    savePost: function() {
-        var post = new PostModel()
+    fetchPosts: function() {
+        STORE.data.collection.fetch()
+    },
+
+    savePost: function(postObj) {
+        var post = new PostModel(postObj)
+        post.save().then(
+            (response) => {
+                location.hash = 'home'
+            },
+            (error) => {
+                alert('sorry your post was unsuccessful')
+            })
     }
 }
 
