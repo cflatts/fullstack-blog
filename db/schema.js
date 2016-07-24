@@ -14,6 +14,16 @@ const usersSchema = new Schema({
 
 })
 
+const postSchema = new Schema ({
+    title: {type: String, required: true},
+    content: {type: String, required: true},
+    authorEmail: {type: String, required: true}
+    authorId: {type: String, required: true},
+    date: {new Date()}
+
+})
+
 module.exports = {
   User: createModel('User', usersSchema)
+  Post: createModel('Post', postSchema)
 }
